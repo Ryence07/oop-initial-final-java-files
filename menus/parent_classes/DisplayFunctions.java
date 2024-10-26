@@ -3,8 +3,9 @@ package menus.parent_classes;
 import data.VehicleModelData;
 
 public class DisplayFunctions {
+    
+    // Displays available vehicle models
     protected static void displayModels() {
-        
             System.out.println("===========================");
             for (int i = 0; i < VehicleModelData.models.length; i++) {
                 System.out.println("|    "+VehicleModelData.models[i][0]+"  "+VehicleModelData.models[i][1]);
@@ -12,6 +13,7 @@ public class DisplayFunctions {
             System.out.println("===========================");
     }
 
+    // Displays Toyota Fortuner variants
     protected static void displayToyotaFortunerVariants(boolean displayPrice) {
             System.out.println("===========================");
             for (int i = 0; i < VehicleModelData.toyotaFortunerVariants.length; i++) {
@@ -19,6 +21,8 @@ public class DisplayFunctions {
             }
             System.out.println("===========================");
     }
+
+    // Displays Toyota Hilux variants
     protected static void displayToyotaHiluxVariants(boolean displayPrice) {
             System.out.println("===========================");
             for (int i = 0; i < VehicleModelData.toyotaHiluxVariants.length; i++) {
@@ -26,6 +30,8 @@ public class DisplayFunctions {
             }
             System.out.println("===========================");
     }
+
+    // Displays Toyota Innova variants
     protected static void displayToyotaInnovaVariants(boolean displayPrice) {
             System.out.println("===========================");
             for (int i = 0; i < VehicleModelData.toyotaInnovaVariants.length; i++) {
@@ -33,6 +39,8 @@ public class DisplayFunctions {
             }
             System.out.println("===========================");
     }
+
+    // Displays Toyota Vios variants,
     protected static void displayToyotaViosVariants(boolean displayPrice) {
             System.out.println("===========================");
             for (int i = 0; i < VehicleModelData.toyotaViosVariants.length; i++) {
