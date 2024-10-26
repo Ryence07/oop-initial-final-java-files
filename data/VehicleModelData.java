@@ -2,9 +2,15 @@ package data;
 
 public class VehicleModelData {
 
+    // Array of model codes and their corresponding full names for Toyota vehicles
+    public static String[][] models = new String[][]{
+        {"F", "Toyota Fortuner"},
+        {"H", "Toyota Hilux"},
+        {"I", "Toyota Innova"},
+        {"V", "Toyota Vios"}
+    };
 
-    public static String[][] models = new String[][]{{"F", "Toyota Fortuner"}, {"H", "Toyota Hilux"}, {"I", "Toyota Innova"}, {"V", "Toyota Vios"}};
-
+    // Array of Toyota Fortuner variants with unique IDs, names, and prices
     public static String[][] toyotaFortunerVariants = new String[][]{
         {"1", "2.4 G 4x2 MT", "1769000"},
         {"2", "2.4 G 4x2 AT", "1861000"},
@@ -15,6 +21,7 @@ public class VehicleModelData {
         {"7", "GR-S 4x4 2.8 AT", "2650000"}
     };
 
+    // Array of Toyota Hilux variants with unique IDs, names, and prices
     public static String[][] toyotaHiluxVariants = new String[][]{
         {"1", "2.4 E 4x2 MT", "1312000"},
         {"2", "2.4 E 4x2 AT", "1392000"},
@@ -27,6 +34,7 @@ public class VehicleModelData {
         {"9", "2.8 GR Sport AT", "2178000"}
     };
 
+    // Array of Toyota Innova variants with unique IDs, names, and prices
     public static String[][] toyotaInnovaVariants = new String[][]{
         {"1", "2.8 J DSL MT", "1261000"},
         {"2", "2.8 XE AT", "1375000"},
@@ -36,6 +44,7 @@ public class VehicleModelData {
         {"6", "2.8 V DSL AT", "1823000"}
     };
 
+    // Array of Toyota Vios variants with unique IDs, names, and prices
     public static String[][] toyotaViosVariants = new String[][]{
         {"1", "1.3 J MT", "732000"},
         {"2", "1.3 XE CVT", "774000"},
@@ -45,34 +54,37 @@ public class VehicleModelData {
         {"6", "1.5 G CVT", "1039000"}
     };
 
+    // Returns the full name of a model based on its code
     public static String getModelFullName(String model) {
         switch (model) {
             case "F": return "Toyota Fortuner";
             case "H": return "Toyota Hilux";
             case "I": return "Toyota Innova";
             case "V": return "Toyota Vios";
-            default: return "null";
+            default: return "null";  // Return "null" for invalid model codes
         }
     }
 
+    // Retrieves the variant name based on model code and variant index
     public static String getVariant(String model, int index) {
         switch (model) {
             case "F": return VehicleModelData.toyotaFortunerVariants[index-1][1];
             case "H": return VehicleModelData.toyotaHiluxVariants[index-1][1];
             case "I": return VehicleModelData.toyotaInnovaVariants[index-1][1];
             case "V": return VehicleModelData.toyotaViosVariants[index-1][1];
-            default : return "null";
+            default : return "null"; // Return "null" for invalid model codes
         }
     }
 
+    // Retrieves the price of a variant based on model code and variant index
     public static double getVariantPrice(String model, int index) {
         switch (model) {
             case "F": return Double.valueOf(VehicleModelData.toyotaFortunerVariants[index-1][2]);
             case "H": return Double.valueOf(VehicleModelData.toyotaHiluxVariants[index-1][2]);
             case "I": return Double.valueOf(VehicleModelData.toyotaInnovaVariants[index-1][2]);
             case "V": return Double.valueOf(VehicleModelData.toyotaViosVariants[index-1][2]);
-            default : return 0;
+            default : return 0;  // Return 0 for invalid model codes
         }
     }
-
 }
+
